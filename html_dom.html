@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset ="UTF-8">
+<link rel="stylesheet" href="css/myStyle.css"/>
+<link rel="stylesheet" href="lib/bootstrap-3.2.0-dist/css/bootstrap.css"/>
+
+<!-- add css sources at here -->
+
+<!-- add javascript libs at here -->
+<script type="text/javascript" src="lib/jquery-2.1.1.js"></script>
+<script type="text/javascript" src="lib/bootstrap-3.2.0-dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="lib/lodash-2.4.1/lodash.compat.js"></script>
+
+<!-- add javascript sources at here -->
+<script type="text/javaScript" src="js/main.js"></script>
+<script type="text/javaScript" src="js/model/subject.js"></script>
+<script type="text/javaScript" src="js/model/choiceSubject.js"></script>
+<script type="text/javaScript" src="js/model/multipleChoiceSubject.js"></script>
+
+<title>统一建模语言理论测试</title>
+</head>
+ <body>
+  <div class="container">
+   <form action="#" method="post" onSubmit="return checkInformation()">
+    <h1 class="text-center">统一建模语言理论测试</h1>
+
+     <div class="panel panel-default">
+      <table class="table">
+       <tr>
+        <th>考试科目: 统一建模语言UML</th>
+        <th>时间: 100分</th>
+        <th>得分: <input type="text" name="scores" id="scores"></th>
+       </tr>
+       <tr>
+        <th id="class">班级: <input type="text" class="form-control" name="studentClass"></th>
+        <th id="number">学号: <input type="text" class="form-control" name="studentNumber"></th>
+        <th id="name">姓名: <input type="text" class="form-control" name="studentName"></th>
+      </tr>
+     </table>
+   </div>
+
+   <div class="panel panel-success">
+    <div class="panel-heading">
+     <h2 class="panel-title">一、填空题(每空5分，共4空)</h2>
+    </div>
+     <div class="panel-body">
+       <ol class="form-group">
+        <li class="form-group-item">UML 的中文全称是:<br>
+            <input type="text" name="gap_ans_1" id="gap1">.</li>
+        <li class="form-group-item">对象最突出的特征是:<br>
+          <input type="text" name="gap_ans_2" id="gap2_1">
+        <input type="text" name="gap_ans_2" id="gap2_2">
+        <input type="text" name="gap_ans_2" id="gap2_3">.</li>
+       </ol>
+      </div>
+   </div>
+
+
+   <div class="panel panel-success">
+    <div class="panel-heading">
+     <h2 class="panel-title">二 、选择题(每题10分，共2题)</h2>
+    </div>
+     <div class="panel-body">
+      <ol class="form-group">
+       <li class="form-group-item">
+        UML与软件工程的关系是:<br>
+        <input type="radio" name="radio_ans_1" id="sel1_1" value="A">(A)UML就是软件工程<br>
+        <input type="radio" name="radio_ans_1" id="sel1_2" value="B">(B)UML参与到软件工程中软件开发过UML<br>
+        <input type="radio" name="radio_ans_1" id="sel1_3" value="C">(C)UML与软件工程无关<br>
+        <input type="radio" name="radio_ans_1" id="sel1_4" value="D">(D)UML是软件工程的一部分<br>
+       </li>
+
+       <li class="form-group-item">
+        Java 语言支持:<br>
+        <input type="radio" name="radio_ans_2" id="sel2_1" value="A">(A)单继承<br>
+        <input type="radio" name="radio_ans_2" id="sel2_2" value="B">(B)多继承<br>
+        <input type="radio" name="radio_ans_2" id="sel2_3" value="C">(C)单继承和多继承都支持<br>
+        <input type="radio" name="radio_ans_2" id="sel2_4" value="D">(D)继承和多继承都不支持<br>
+       </li>
+      </ol>
+     </div>
+   </div>
+
+   <div class="panel panel-success">
+    <div class="panel-heading">
+     <h2 class="panel-title">三、多选题(每题10分，共2题)</h2>
+    </div>
+     <div class="panel-body">
+      <ol>
+       <li>
+        用例的粒度分为以下哪三种。<br>
+        <input type="checkbox" name="check_ans_1" id="mul1_1" value="A">(A)概述级<br>
+        <input type="checkbox" name="check_ans_1" id="mul1_2" value="B">(B)需求级<br>
+        <input type="checkbox" name="check_ans_1" id="mul1_3" value="C">(C)用户目标级<br>
+        <input type="checkbox" name="check_ans_1" id="mul1_4" value="D">(D)子功能级<br>
+       </li>
+
+       <li>
+        类图由以下哪三部分组成。<br>
+        <input type="checkbox" name="check_ans_2" id="mul2_1" value="A">(A)名称(Name)<br>
+        <input type="checkbox" name="check_ans_2" id="mul2_2" value="B">(B)属性(Attribute)<br>
+        <input type="checkbox" name="check_ans_2" id="mul2_3" value="C">(C)操作(Operation)<br>
+        <input type="checkbox" name="check_ans_2" id="mul2_4" value="D">(D)方法(Function)<br>
+       </li>
+      </ol>
+     </div>
+   </div>
+
+   <div class="panel panel-success">
+    <div class="panel-heading">
+     <h2 class="panel-title">四、判断题(每题10分，共2题)</h2>
+    </div>
+     <div class="panel-body">
+    <ol>
+       <li>
+        用例图只是用于和客户交流和沟通的,用于确定需求。
+        <input type="radio" id="tureOrFalse1_1" name="ans_1" value="yes">
+        <span class="glyphicon glyphicon-ok red"></span>
+        <input type="radio" id="tureOrFalse1_2" name="ans_1" value="no">
+        <span class="glyphicon glyphicon-remove blue"></span><br>
+       </li>
+
+       <li>
+        在状态图中,终止状态在一个状态图中允许有任意多个。
+        <input type="radio" id="tureOrFalse2_1" name="ans_2" value="yes" class="">
+        <span class="glyphicon glyphicon-ok red"></span>
+        <input type="radio" id="tureOrFalse2_2" name="ans_2" value="no">
+        <span class="glyphicon glyphicon-remove blue"></span><br>
+       </li>
+      </ol>
+     </div>
+   </div>
+
+   <div class="panel panel-success">
+    <div class="panel-heading">
+     <h2 class="panel-title">五、简答题(每题20分，共1题)</h2>
+    </div>
+     <div class="panel-body">
+      <ol class="form-group">
+       <li class="form-group-item">
+        简述什么是模型以及模型的表现形式?<br>
+        <textarea rows="4" cols="100%" id="short5"></textarea>
+       </li>
+      </ol>
+     </div>
+    </div>
+   <p class="text-center">
+   <input type="submit" class="btn btn-success" value="提交">（请仔细核对后提交！）<br>
+   </form>
+ </container>
+ </body>
+
+</html>
