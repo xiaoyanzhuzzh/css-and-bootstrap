@@ -43,6 +43,9 @@ function hasEmptyRequiredInput(inputs) {
             divElement.className = 'has-error';
             return true;
         }
+        else{
+          divElement.className = 'form control';
+        }
     }
     return false;
 }
